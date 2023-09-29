@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
         title: 'Snackbar',
         theme: ThemeData(
             primarySwatch: Colors.blue, scaffoldBackgroundColor: Colors.white),
-        home: const SnackbarWidget(),
+        //home: const SnackbarWidget(),
         routes: {
           //"/": (context) => const SplashScreen(),
           MyRoutes.snackbarroute: (context) => const SnackbarWidget(),
