@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:getx_learn/dailogbox.dart';
 import 'package:getx_learn/routes/routes.dart';
 import 'package:getx_learn/snackbar.dart';
 
@@ -16,10 +17,11 @@ class MyApp extends StatelessWidget {
         title: 'Snackbar',
         theme: ThemeData(
             primarySwatch: Colors.blue, scaffoldBackgroundColor: Colors.white),
-        //home: const SnackbarWidget(),
+        home: const DialogboxWidget(),
         routes: {
           //"/": (context) => const SplashScreen(),
           MyRoutes.snackbarroute: (context) => const SnackbarWidget(),
+          MyRoutes.dialogboxroute: (context) => const DialogboxWidget(),
         });
   }
 }

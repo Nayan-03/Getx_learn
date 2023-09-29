@@ -26,7 +26,7 @@ class _SnackbarWidgetState extends State<SnackbarWidget> {
                 onPressed: () {
                   Get.snackbar(
                       "Snackbar Title", "This will be Snackbar Message",
-                      //////////////////// Properties ////////////////
+/////////////////////////// Properties ///////////////////////////
                       snackPosition: SnackPosition.BOTTOM,
                       // titleText: const Text("Nayan"),
                       // messageText: const Text(
