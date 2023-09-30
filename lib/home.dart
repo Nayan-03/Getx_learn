@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:getx_learn/next_screen.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});

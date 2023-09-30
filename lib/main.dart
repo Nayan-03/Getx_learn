@@ -6,6 +6,7 @@ import 'package:getx_learn/navigation.dart';
 import 'package:getx_learn/route_navigation.dart';
 import 'package:getx_learn/routes/routes.dart';
 import 'package:getx_learn/snackbar.dart';
+import 'package:getx_learn/state_managment.dart';
 
 void main() {
   runApp(const MyApp());
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
         title: 'Snackbar',
         theme: ThemeData(
             primarySwatch: Colors.blue, scaffoldBackgroundColor: Colors.white),
-        home: const Navigationroute(),
+        home: StateManagment(),
         routes: {
           //"/": (context) => const SplashScreen(),
           MyRoutes.snackbarroute: (context) => const SnackbarWidget(),
