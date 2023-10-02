@@ -51,9 +51,45 @@ class MyController extends GetxController {
   // }
 
 // /////////// Getx unique id //////////////////
-  var count = 0;
+  // var count = 0;
+  // void increment() {
+  //   count++;
+  //   update(['txtCount']);
+  // }
+
+////////////////// Workers trigger specific callbacks when an event occurs //////////////////
+  var count = 0.obs;
   void increment() {
     count++;
-    update(['txtCount']);
+  }
+
+  @override
+  void onInit() {
+    super.onInit();
+//  ///////// called every time when the value of count variable chages //////////////
+    // ever(count, (_) => print(count));
+
+//  ///////// Called every time when the value of any variable from the list changes //////////////////
+    // everAll([count], (callback) => print(count));
+
+//  ////////// Called only once when the variable value changes ////////////////
+    // once(count, (callback) => print(count));
+
+//  /////////// Called every time the user stops typing for  1 second //////////////
+    // debounce(
+    //     count,
+    //     (callback) =>
+    //         print("Called every time the user stops typing for  1 second"),
+    //     time: Duration(seconds: 1));
+
+//  ////////// imagine  that the user can earn coins by clicking on something, ////////////////
+//  ////////// If he clicked 300 times in the same minute, //////////////
+//  ////////// he would have 300 coins, using interval, ////////////////
+//  ////////// you can set a time frame for 3 seconds, /////////////////
+//  /////////// and even than clicking 300 or a thousand times, //////////
+//  /////////// the maximum he would get in 1 minute would be 20 coins, ///////////
+//  /////////// clicking 300 0r 1 million times
+    // interval(count, (callback) => print("Nayan Moradiya"),
+    //     time: Duration(seconds: 3));
   }
 }
