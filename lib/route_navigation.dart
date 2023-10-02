@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:getx_learn/home.dart';
 import 'package:getx_learn/main.dart';
 import 'package:getx_learn/next_screen.dart';
+import 'package:getx_learn/unknownroute.dart';
 
 class Navigationroute extends StatelessWidget {
   const Navigationroute({super.key});
@@ -17,7 +18,7 @@ class Navigationroute extends StatelessWidget {
         GetPage(name: '/', page: () => const MyApp()),
         GetPage(name: '/home', page: () => const Home()),
         GetPage(
-            name: '/nextScreen/ : someValue',
+            name: '/nextScreen/:someValue',
             page: () => const NextScreen(),
             transition: Transition.leftToRight),
 
@@ -26,6 +27,10 @@ class Navigationroute extends StatelessWidget {
         //     page: () => const NextScreen(),
         //     transition: Transition.leftToRight),
       ],
+      unknownRoute: GetPage(
+        name: '/notfound',
+        page: () => const UnknownRoute(),
+      ),
       home: Scaffold(
         appBar: AppBar(
           title: const Text("Route Navigation"),
@@ -38,15 +43,17 @@ class Navigationroute extends StatelessWidget {
               ElevatedButton(
                 onPressed: () {
                   ///////////// Propertise ///////////////////
-                  Get.toNamed("/home");
+                  //Get.toNamed("/home");
+//  /////////// for the unkownroute /////////////////////
+                  Get.toNamed('/x');
 //  /////////// Go to home screen but no option  to return to privous screen////////////////
                   //Get.offNamed("/home");
 //  /////////// Go to home screen and cancel all privious screens/  routes ////////////////
                   //Get.offAllNamed("/home");
-//  ////////////// Dynamic URL link //////////////////
+//  /////////// Dynamic URL link //////////////////
                   // Get.toNamed(
                   //   "/home?channel=Nayan Moradiya&content=Flutter Getx",
-                  //);
+                  // );
                 },
                 child: const Text("Go to Home"),
               ),

@@ -11,12 +11,13 @@ class NextScreen extends StatelessWidget {
         title: const Text("Next Screen"),
       ),
       body: Center(
+        // child: Text(
         //   "This is next screen",
         //   style: TextStyle(color: Colors.red, fontSize: 30.0),
         // ),
         child: Text(
           "${Get.parameters['someValue']}",
-          style: TextStyle(color: Colors.red, fontSize: 25.0),
+          style: const TextStyle(color: Colors.red, fontSize: 25.0),
         ),
       ),
     );

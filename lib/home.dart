@@ -22,7 +22,8 @@ class Home extends StatelessWidget {
             const SizedBox(height: 10.0),
             ElevatedButton(
               onPressed: () {
-                Get.toNamed('/nextScreen');
+                //Get.toNamed('/nextScreen');
+                Get.toNamed('/nextScreen/1234');
               },
               child: const Text(
                 "Next Screen",
@@ -42,10 +43,10 @@ class Home extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 10.0),
-            // Text(
-            //     "Channel name is ${Get.parameters['channel']} and content is ${Get.parameters['content']}",
-            //     style: const TextStyle(color: Colors.red, fontSize: 25.0)),
-///////////////////////////            
+            Text(
+                "Channel name is ${Get.parameters['channel']} and content is ${Get.parameters['content']}",
+                style: const TextStyle(color: Colors.red, fontSize: 25.0)),
+///////////////////////////
             // Text(
             //   "${Get.arguments}",
             //   style: TextStyle(color: Colors.green, fontSize: 20.0),
