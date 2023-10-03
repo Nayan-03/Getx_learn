@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class MyController extends GetxController {
   // var student = Student();
@@ -38,7 +39,7 @@ class MyController extends GetxController {
   //   print("Clean up task");
   // }
 
-  //            ////////// Better Approach //////////////
+// ////////// Better Approach //////////////
   // @override
   // void onInit() {
   //   print("Init Cakked");
@@ -58,29 +59,29 @@ class MyController extends GetxController {
   // }
 
 ////////////////// Workers trigger specific callbacks when an event occurs //////////////////
-  var count = 0.obs;
-  void increment() {
-    count++;
-  }
+  // var count = 0.obs;
+  // void increment() {
+  //   count++;
+  // }
 
-  @override
-  void onInit() {
-    super.onInit();
+  // @override
+  // void onInit() {
+  //   super.onInit();
 //  ///////// called every time when the value of count variable chages //////////////
-    // ever(count, (_) => print(count));
+  // ever(count, (_) => print(count));
 
 //  ///////// Called every time when the value of any variable from the list changes //////////////////
-    // everAll([count], (callback) => print(count));
+  // everAll([count], (callback) => print(count));
 
 //  ////////// Called only once when the variable value changes ////////////////
-    // once(count, (callback) => print(count));
+  // once(count, (callback) => print(count));
 
 //  /////////// Called every time the user stops typing for  1 second //////////////
-    // debounce(
-    //     count,
-    //     (callback) =>
-    //         print("Called every time the user stops typing for  1 second"),
-    //     time: Duration(seconds: 1));
+  // debounce(
+  //     count,
+  //     (callback) =>
+  //         print("Called every time the user stops typing for  1 second"),
+  //     time: Duration(seconds: 1));
 
 //  ////////// imagine  that the user can earn coins by clicking on something, ////////////////
 //  ////////// If he clicked 300 times in the same minute, //////////////
@@ -89,7 +90,22 @@ class MyController extends GetxController {
 //  /////////// and even than clicking 300 or a thousand times, //////////
 //  /////////// the maximum he would get in 1 minute would be 20 coins, ///////////
 //  /////////// clicking 300 0r 1 million times
-    // interval(count, (callback) => print("Nayan Moradiya"),
-    //     time: Duration(seconds: 3));
+  // interval(count, (callback) => print("Nayan Moradiya"),
+  //     time: Duration(seconds: 3));
+
+// //////////////// translator controller internationalization ////////////////////
+
+  // void changeLanguage(String param1, String param2) {
+  //   var locale = Locale(param1, param2);
+  //   Get.updateLocale(locale);
+  // }
+
+// //////////////// sharedPreference /////////////////
+  void incrementCounter() async {
+    SharedPreferences prefes = await SharedPreferences.getInstance();
+    int counter = (prefes.getInt('counter') ?? 0) + 1;
+    print('Presses $counter times.');
+    await prefes.setInt('counter', counter);
   }
+ 
 }

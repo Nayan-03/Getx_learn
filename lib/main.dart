@@ -1,11 +1,16 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:getx_learn/bottomsheet.dart';
 import 'package:getx_learn/dailogbox.dart';
+import 'package:getx_learn/dependency.dart';
+import 'package:getx_learn/getx_services.dart';
 import 'package:getx_learn/home.dart';
 import 'package:getx_learn/navigation.dart';
 import 'package:getx_learn/route_navigation.dart';
 import 'package:getx_learn/routes/routes.dart';
 import 'package:getx_learn/snackbar.dart';
+import 'package:getx_learn/translator.dart';
 import 'package:getx_learn/unique_id.dart';
 import 'package:getx_learn/workers.dart';
 
@@ -20,10 +25,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
-        title: 'Snackbar', 
+        title: 'Snackbar',
         theme: ThemeData(
             primarySwatch: Colors.blue, scaffoldBackgroundColor: Colors.white),
-        home: Workers(),
+        home: const GService(),
         routes: {
           //"/": (context) => const SplashScreen(),
           MyRoutes.snackbarroute: (context) => const SnackbarWidget(),

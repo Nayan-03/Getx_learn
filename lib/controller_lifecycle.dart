@@ -23,9 +23,9 @@ class ControllerLifecycle extends StatelessWidget {
                 // initState: (state) => myController.increment(),
                 // dispose: (state) => myController.cleanUpTask(),
                 builder: (controller) {
-                  return Text(
-                    "The value is ${controller.count}",
-                    style: const TextStyle(fontSize: 25.0),
+                  return const Text("",
+                   // "The value is ${controller.count}",
+                    style: TextStyle(fontSize: 25.0),
                   );
                 },
               ),

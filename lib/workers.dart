@@ -19,13 +19,14 @@ class Workers extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               ElevatedButton(
-                  onPressed: () => myController.increment(),
+                  onPressed: () {},
+                  // => myController.increment(),
                   child: const Text("Increment")),
               Padding(
                 padding: const EdgeInsets.all(16),
                 child: TextField(
                   onChanged: (val) {
-                    myController.increment();
+                  //  myController.increment();
                   },
                 ),
               ),

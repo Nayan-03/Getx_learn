@@ -90,10 +90,10 @@ class StateManagment extends StatelessWidget {
               GetX<MyController>(
                 //init: MyController(),
                 builder: (controller) {
-                  return Text(
+                  return const Text( "",
                     //"The value  is ${controller.count}",
-                    "The value is ${myController.count}",
-                    style: const TextStyle(fontSize: 25),
+                    //"The value is ${myController.count}",
+                    style: TextStyle(fontSize: 25),
                   );
                 },
               ),
@@ -102,7 +102,7 @@ class StateManagment extends StatelessWidget {
                 onPressed: () {
 //  ///////////// If instance of controller not createdat top ///////////////
                   //Get.find<MyController>().increment();
-                  myController.increment();
+                  //myController.increment();
                 },
                 child: const Text("Increment"),
               ),

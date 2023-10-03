@@ -22,24 +22,25 @@ class UniqueId extends StatelessWidget {
               GetBuilder<MyController>(
                 id: 'txtCount',
                 builder: (controller) {
-                  return Text(
-                    "The value is ${controller.count}",
-                    style: const TextStyle(fontSize: 25.0),
+                  return const Text("",
+                    //"The value is ${controller.count}",
+                    style: TextStyle(fontSize: 25.0),
                   );
                 },
               ),
               GetBuilder<MyController>(
                 //id: 'txtCount',
                 builder: (controller) {
-                  return Text(
-                    "The value is ${controller.count}",
-                    style: const TextStyle(fontSize: 25.0),
+                  return const Text("",
+                    //"The value is ${controller.count}",
+                    style: TextStyle(fontSize: 25.0),
                   );
                 },
               ),
               const SizedBox(height: 15.0),
               ElevatedButton(
-                onPressed: () => myController.increment(),
+                onPressed: () {},
+                //=> myController.increment(),
                 child: const Text("Increment"),
               ),
             ],
